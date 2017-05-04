@@ -190,5 +190,3 @@ function makeLogin(username, password) {
     });
 
 }
-
-

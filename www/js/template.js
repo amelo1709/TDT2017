@@ -123,6 +123,19 @@ $(document).ready(function () {
     $('#modalLogin').on('show.bs.modal', function (e) {
         $('.navbar-toggle').click()
     })
+
+    $("#menuLogout").on("click", function (e) {
+        window.localStorage.removeItem("username");
+        window.localStorage.removeItem("password");
+        window.localStorage.removeItem("rememberme");
+        window.location = "index.html"
+
+    });
+
+    $("#menuSalir").on("click", function (e) {
+        navigator.app.exitApp();
+
+    });
 });
 
 
