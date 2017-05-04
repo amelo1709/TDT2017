@@ -1,0 +1,14 @@
+[
+  {
+    "outputFileName": "www/js/jquery.mobile-1.4.5.min.js",
+    "inputFiles": [
+      "www/js/jquery.mobile-1.4.5.js"
+    ]
+  },
+  {
+    "outputFileName": "www/css/bootstrap-theme.min.css",
+    "inputFiles": [
+      "www/css/bootstrap-theme.css"
+    ]
+  }
+]
