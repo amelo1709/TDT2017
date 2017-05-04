@@ -9,7 +9,7 @@
     redesSociales: [
         {
             icono: "fa fa-globe",
-            url: "http://trainingtrendsexpo.com/"
+            url: "http://www.transparentbusiness.com"
         },
         {
             icono: "fa fa-facebook",
