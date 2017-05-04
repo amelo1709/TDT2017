@@ -13,7 +13,7 @@ var app = {
         //Carga las redes sociales
         loadRRSS();
 
-        //Ajusta el menú dependiendo si el usuario está logueado
+        //Ajusta el menÃº dependiendo si el usuario estÃ¡ logueado
         if (estoyLogeado())
         {
             $("#ItemMenuLogin").hide();
@@ -45,9 +45,9 @@ var app = {
 
     onOffLine: function () {
         navigator.notification.alert(
-            'Esta aplicación solo funciona con acceso a Internet. Verifique la conectividad e intente nuevamente.',  // message
+            'Esta aplicaciÃ³n solo funciona con acceso a Internet. Verifique la conectividad e intente nuevamente.',  // message
             function () { navigator.app.exitApp(); },         // callback
-            'Sin conexión',            // title
+            'Sin conexiÃ³n',            // title
             'Salir'                  // buttonName
         );
     },
@@ -63,12 +63,12 @@ $(document).ready(function () {
     $.support.cors = true;
     $.allowCrossDomainPages = true;
 
-    //Código exclusivo de inicio.html
+    //CÃ³digo exclusivo de inicio.html
 
-    //Deshabilita el botón volver para evitar volver al Splash (index.html)
+    //Deshabilita el botÃ³n volver para evitar volver al Splash (index.html)
     disableBack();
 
-    //Carga título y Subtitulo
+    //Carga tÃ­tulo y Subtitulo
     $("#tituloEvento").text(configuracion.tituloEvento)
     $("#subtituloEvento").text(configuracion.subtituloEvento)
     //Carga el contador si tiene fecha establecida
@@ -132,7 +132,6 @@ $(document).ready(function () {
     });
 
     $("#menuSalir").on("click", function (e) {
-        alert("Test")
         navigator.app.exitApp();
 
     });
