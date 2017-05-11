@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.registroenlaweb.app.tdt" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.registroenlaweb.app.tdt" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
   <name>TDT 2017</name>
   <description>
     Ten toda la información necesaria sobre el evento Training And Development Trends 2017 en Panamá.
