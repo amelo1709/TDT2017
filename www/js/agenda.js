@@ -63,14 +63,11 @@ $(document).ready(function () {
     $.support.cors = true;
     $.allowCrossDomainPages = true;
 
-    //Código exclusivo de inicio.html
-
-    //Deshabilita el botón volver para evitar volver al Splash (index.html)
-    //disableBack();
-
-    //Carga los patrocinadores
-    loadDatos()
-
+    //Controla el comportamiento del menu con el modal de Login
+    $('#modalStand').on('hide.bs.modal', function (e) {
+        $("#logoExpositor").attr("src", '')
+        $("#nombreStand").text('')
+    })
 
     if (window.localStorage.getItem("rememberme") == "true") {
         $("#txbEmail").val(window.localStorage.getItem("username"))
@@ -105,7 +102,6 @@ $(document).ready(function () {
         $('.navbar-toggle').click()
     })
 
-
     $("#menuLogout").on("click", function (e) {
         window.localStorage.removeItem("username");
         window.localStorage.removeItem("password");
@@ -121,7 +117,3 @@ $(document).ready(function () {
 });
 
 
-function loadDatos() {
-    $("#direccion").html(configuracion.direccion)
-    $("#enlace").html('<a href="geo:' + configuracion.coordenadas + '">open map</a>')
-}

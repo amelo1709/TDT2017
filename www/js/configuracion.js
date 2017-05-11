@@ -44,6 +44,20 @@
             menu: true
         },
         {
+            id: "expo",
+            titulo: "Expo",
+            icono: "fa fa-map-signs",
+            url: "mapa.html",
+            menu: true
+        },
+        {
+            id: "agenda",
+            titulo: "Agenda",
+            icono: "fa fa-list",
+            url: "agenda.html",
+            menu: true
+        },
+        {
             id: "ubicacion",
             titulo: "Ubicación",
             icono: "fa fa-map",

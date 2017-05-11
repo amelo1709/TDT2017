@@ -63,31 +63,20 @@ $(document).ready(function () {
     $.support.cors = true;
     $.allowCrossDomainPages = true;
 
-    //Código exclusivo de inicio.html
+    $('img[usemap]').rwdImageMaps();
 
-    //Deshabilita el botón volver para evitar volver al Splash (index.html)
-    disableBack();
+    $("#image-map area").click(function (e) {
+        e.preventDefault();
+        $("#logoExpositor").attr("src", $(this).data("imagen"))
+        $("#nombreStand").text($(this).data("nombre"))
+        $('#modalStand').modal();
+    });
 
-    //Carga título y Subtitulo
-    $("#tituloEvento").text(configuracion.tituloEvento)
-    $("#subtituloEvento").text(configuracion.subtituloEvento)
-    //Carga el contador si tiene fecha establecida
-    if (configuracion.fechaEvento != undefined) {
-        ejecutarContador()
-    }
-    else {
-        $("#countDown").hide()
-    }
-    //Carga las secciones de la APP
-    $.each(configuracion.secciones, function (i, item) {
-        if (configuracion.secciones[i].menu) {
-            if ((configuracion.secciones[i].etiqueta == "") || (configuracion.secciones[i].etiqueta == undefined)) {
-                $("#botones").append('<a href="' + configuracion.secciones[i].url + '"  class="btn btn-app"><i class="' + configuracion.secciones[i].icono + '"></i> ' + configuracion.secciones[i].titulo + '</a>');
-            }
-            else {
-                $("#botones").append('<a href="' + configuracion.secciones[i].url + '" class="btn btn-app"><span class="badge ' + configuracion.secciones[i].color + '">' + configuracion.secciones[i].etiqueta + '</span><i class="' + configuracion.secciones[i].icono + '"></i> ' + configuracion.secciones[i].titulo + '</a>');
-            }
-        }
+
+    //Controla el comportamiento del menu con el modal de Login
+    $('#modalStand').on('hide.bs.modal', function (e) {
+        $("#logoExpositor").attr("src", '')
+        $("#nombreStand").text('')
     })
 
     if (window.localStorage.getItem("rememberme") == "true") {
@@ -135,7 +124,6 @@ $(document).ready(function () {
         navigator.app.exitApp();
 
     });
-
 });
 
 
